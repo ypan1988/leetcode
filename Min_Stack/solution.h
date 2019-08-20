@@ -2,13 +2,13 @@
 
 class MinStack {
   std::stack<int> s, min;
-public:
+
+ public:
   /** initialize your data structure here. */
-  MinStack() {
-  }
+  MinStack() {}
 
   void push(int x) {
-    if (min.empty() || x <=  min.top()) min.push(x);
+    if (min.empty() || x <= min.top()) min.push(x);
     s.push(x);
   }
 
@@ -17,11 +17,7 @@ public:
     s.pop();
   }
 
-  int top() {
-    return s.top();
-  }
+  int top() { return s.top(); }
 
-  int getMin() {
-    return min.top();
-  }
+  int getMin() { return min.top(); }
 };

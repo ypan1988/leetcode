@@ -7,8 +7,8 @@ struct ListNode {
 };
 
 class Solution {
-public:
-  ListNode* rotateRight(ListNode* head, int k) {
+ public:
+  ListNode *rotateRight(ListNode *head, int k) {
     if (!head) return head;
 
     ListNode *l1 = head, *l2;
@@ -38,7 +38,7 @@ public:
       l1 = l1->next;
     }
     ListNode *l3 = head;
-    for (int i = 0; i < (count-k); ++i) {
+    for (int i = 0; i < (count - k); ++i) {
       ln->next = new ListNode(l3->val);
       ln = ln->next;
       l3 = l3->next;

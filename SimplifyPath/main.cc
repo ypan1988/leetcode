@@ -1,8 +1,7 @@
 #include <iostream>
 #include "solution.h"
 
-int main()
-{
+int main() {
   Solution s;
   std::cout << s.simplifyPath("/home/") << std::endl;
   std::cout << s.simplifyPath("/../") << std::endl;

@@ -5,8 +5,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
   Solution s;
 
   vector<int> ivec1 = {1, 3};

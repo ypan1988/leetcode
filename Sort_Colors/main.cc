@@ -2,8 +2,7 @@
 #include <vector>
 #include "solution.h"
 
-int main()
-{
+int main() {
   Solution s;
   std::vector<int> ivec = {2, 0, 2, 1, 1, 0};
   s.sortColors(ivec);

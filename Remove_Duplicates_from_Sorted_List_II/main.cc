@@ -4,7 +4,7 @@
 
 using namespace std;
 
-ListNode* create_linkedlists(initializer_list<int> lst) {
+ListNode *create_linkedlists(initializer_list<int> lst) {
   ListNode *res = new ListNode(0);
   ListNode *tail = res;
   for (auto iter = lst.begin(); iter != lst.end(); ++iter) {
@@ -15,11 +15,10 @@ ListNode* create_linkedlists(initializer_list<int> lst) {
   return res->next;
 }
 
-int main()
-{
+int main() {
   Solution s;
-  ListNode *l1 = create_linkedlists({1,2,3,3,4,4,5});
-  ListNode *l2 = create_linkedlists({1,1,1,2,3});
+  ListNode *l1 = create_linkedlists({1, 2, 3, 3, 4, 4, 5});
+  ListNode *l2 = create_linkedlists({1, 1, 1, 2, 3});
 
   ListNode *res1 = s.deleteDuplicates(l1);
   ListNode *res2 = s.deleteDuplicates(l2);

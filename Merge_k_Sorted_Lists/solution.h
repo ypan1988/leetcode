@@ -7,12 +7,12 @@
 struct ListNode {
   int val;
   ListNode *next;
-ListNode(int x) : val(x), next(NULL) {}
+  ListNode(int x) : val(x), next(NULL) {}
 };
 
 class Solution {
  public:
-  ListNode* mergeTwoLists(ListNode *l1, ListNode *l2){
+  ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
     ListNode *res = new ListNode(0);
     ListNode *pl = res;
 
@@ -41,16 +41,20 @@ class Solution {
   }
 
   using iterator = std::vector<ListNode *>::iterator;
-  ListNode* mergeKLists(iterator iter1, iterator iter2) {
+  ListNode *mergeKLists(iterator iter1, iterator iter2) {
     int distance = std::distance(iter1, iter2);
-    if (distance == 0) return NULL;
-    else if (distance == 1) return *iter1;
-    else if (distance == 2) return mergeTwoLists(*iter1, *std::next(iter1));
-    else return mergeTwoLists(mergeKLists(iter1, iter1 + distance/2), mergeKLists(iter1 + distance/2, iter2));
+    if (distance == 0)
+      return NULL;
+    else if (distance == 1)
+      return *iter1;
+    else if (distance == 2)
+      return mergeTwoLists(*iter1, *std::next(iter1));
+    else
+      return mergeTwoLists(mergeKLists(iter1, iter1 + distance / 2),
+                           mergeKLists(iter1 + distance / 2, iter2));
   }
 
-
-  ListNode* mergeKLists(std::vector<ListNode *>& lists) {
+  ListNode *mergeKLists(std::vector<ListNode *> &lists) {
     return mergeKLists(lists.begin(), lists.end());
   }
 };

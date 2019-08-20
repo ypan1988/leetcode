@@ -1,8 +1,7 @@
 #include <iostream>
 #include "solution.h"
 
-int main()
-{
+int main() {
   MinStack minStack;
   minStack.push(-2);
   minStack.push(0);

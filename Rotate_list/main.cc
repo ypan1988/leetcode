@@ -14,12 +14,11 @@ ListNode *create_linkedlist(initializer_list<int> lst) {
   return head;
 }
 
-int main()
-{
+int main() {
   Solution s;
 
-  ListNode *l1 = create_linkedlist({1,2,3,4,5});
-  ListNode *l2 = create_linkedlist({0,1,2});
+  ListNode *l1 = create_linkedlist({1, 2, 3, 4, 5});
+  ListNode *l2 = create_linkedlist({0, 1, 2});
 
   ListNode *res1 = s.rotateRight(l1, 2);
   ListNode *res2 = s.rotateRight(l2, 4);

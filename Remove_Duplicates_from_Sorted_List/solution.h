@@ -1,14 +1,14 @@
 #include <cstddef>
 
-struct ListNode{
+struct ListNode {
   int val;
   ListNode *next;
-  ListNode(int x): val(x), next(NULL) {}
+  ListNode(int x) : val(x), next(NULL) {}
 };
 
 class Solution {
-public:
-  ListNode* deleteDuplicates(ListNode* head) {
+ public:
+  ListNode *deleteDuplicates(ListNode *head) {
     ListNode *res = new ListNode(0);
     ListNode *tail = res;
 
@@ -20,7 +20,7 @@ public:
       tail = tail->next;
 
       while (head && head->val == curr_val) {
-	head = head->next;
+        head = head->next;
       }
     }
 
