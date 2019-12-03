@@ -15,7 +15,8 @@ int main() {
   if (ans.empty())
     cout << "Not Found!" << endl;
   else {
-    cout << nums[ans[0] - 1] << " + " << nums[ans[1] - 1] << " == " << target << endl;
+    cout << nums[ans[0] - 1] << " + " << nums[ans[1] - 1] << " == " << target
+         << endl;
   }
 
   return 0;
