@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-#include "Solution.h"
+#include "Solution2.h"
 
 int main() {
   Solution s;
