@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-#include "solution.h"
+#include "solution2.h"
 
 ListNode *CreateList(std::initializer_list<int> lst) {
   ListNode *head = new ListNode(0);
