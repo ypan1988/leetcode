@@ -1,4 +1,4 @@
-#include <cstddef>
+// Insertion sort, too slow!!!
 
 struct ListNode {
   int val;
@@ -6,21 +6,20 @@ struct ListNode {
   ListNode(int x) : val(x), next(NULL) {}
 };
 
-void PrintList(ListNode *ln);
-
 class Solution {
  public:
-  ListNode *insertionSortList(ListNode *head) {
-    ListNode *dummy = new ListNode(-1), *curr;
-
+  ListNode *sortList(ListNode *head) {
+    ListNode *dummy = new ListNode(0), *curr;
     while (head) {
       ListNode *tmp = head->next;
+
       curr = dummy;
       while (curr->next && curr->next->val < head->val) {
         curr = curr->next;
       }
       head->next = curr->next;
       curr->next = head;
+
       head = tmp;
     }
 
