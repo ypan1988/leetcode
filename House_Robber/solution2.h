@@ -6,7 +6,7 @@ class Solution {
 
  public:
   int rob(vector<int>& nums) {
-    memo = vector(nums.size() + 1, -1);
+    memo = vector<int>(nums.size(), -1);
     return rob(nums, nums.size() - 1);
   }
   int rob(vector<int>& nums, int i) {
