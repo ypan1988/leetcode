@@ -15,8 +15,10 @@ class Solution {
       while (j >= 0 && nums[j] == val) {
         --j;
       }
-      if (i >= j) break;
-      else swap(nums[i], nums[j]);
+      if (i >= j)
+        break;
+      else
+        swap(nums[i], nums[j]);
     }
 
     nums.erase(nums.begin() + i, nums.end());
