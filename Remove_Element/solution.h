@@ -16,7 +16,7 @@ class Solution {
         --j;
       }
       if (i >= j) break;
-      swap(nums[i], nums[j]);
+      else swap(nums[i], nums[j]);
     }
 
     nums.erase(nums.begin() + i, nums.end());
