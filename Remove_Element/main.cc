@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#include "solution.h"
+#include "solution2.h"
 
 int main() {
   vector<int> ivec1 = {3, 2, 2, 3};
