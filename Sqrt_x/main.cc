@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "solution2.h"
+#include "solution.h"
 
 int main() {
   Solution sol;
